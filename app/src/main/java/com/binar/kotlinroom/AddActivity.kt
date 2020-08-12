@@ -10,14 +10,20 @@ import kotlinx.android.synthetic.main.activity_edit.*
 import kotlinx.android.synthetic.main.activity_edit.btnSave
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 
 class AddActivity : AppCompatActivity() {
 
     var mDb: ItemDatabase? = null
 
+    //private lateinit var db:ItemDatabase
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add)
+
+//        database.getInstance(this)?.let{
+//            db = it
+//        }
 
         mDb = ItemDatabase.getInstance(this)
 
@@ -27,7 +33,7 @@ class AddActivity : AppCompatActivity() {
                 etAddNameStuff.text.toString(),
                 etAddQty.text.toString().toInt()
             )
-            GlobalScope.async {
+            GlobalScope.launch {
                 val result = mDb?.itemDao()?.addItem(objectStuff)
                 runOnUiThread{
                     if(result!=0.toLong()){

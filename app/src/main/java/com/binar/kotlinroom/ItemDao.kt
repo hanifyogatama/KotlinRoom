@@ -1,11 +1,9 @@
 package com.binar.kotlinroom
 
-import androidx.room.Delete
-import androidx.room.Insert
+import androidx.room.*
 import androidx.room.OnConflictStrategy.REPLACE
-import androidx.room.Query
-import androidx.room.Update
 
+@Dao
 interface ItemDao {
     @Insert(onConflict = REPLACE)
     // return long jumlah data yang berhasil disimpan
