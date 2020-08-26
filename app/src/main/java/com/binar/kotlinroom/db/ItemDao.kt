@@ -1,4 +1,4 @@
-package com.binar.kotlinroom
+package com.binar.kotlinroom.db
 
 import androidx.room.*
 import androidx.room.OnConflictStrategy.REPLACE
@@ -21,5 +21,5 @@ interface ItemDao {
     @Delete
     // int jumlah data yang berhasil di delete
     fun deleteItem(item: Stuff) : Int
-
+    
 }

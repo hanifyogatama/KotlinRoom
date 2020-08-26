@@ -1,4 +1,4 @@
-package com.binar.kotlinroom
+package com.binar.kotlinroom.db
 
 import android.content.Context
 import androidx.room.Database

@@ -1,4 +1,4 @@
-package com.binar.kotlinroom
+package com.binar.kotlinroom.db
 
 import android.os.Parcelable
 import androidx.room.ColumnInfo
