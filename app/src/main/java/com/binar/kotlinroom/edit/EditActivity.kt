@@ -8,8 +8,6 @@ import com.binar.kotlinroom.db.ItemDatabase
 import com.binar.kotlinroom.R
 import com.binar.kotlinroom.db.Stuff
 import kotlinx.android.synthetic.main.activity_edit.*
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 
 class EditActivity : AppCompatActivity(),EditPresenter.Listener {
 

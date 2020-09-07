@@ -3,6 +3,7 @@ package com.binar.kotlinroom.main
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.binar.kotlinroom.R
@@ -13,6 +14,8 @@ import com.binar.kotlinroom.edit.EditActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import org.json.JSONArray
+import org.json.JSONObject
 
 class MainActivity : AppCompatActivity(), MainActivityPresenter.Listener {
     private lateinit var presenter : MainActivityPresenter
@@ -27,6 +30,37 @@ class MainActivity : AppCompatActivity(), MainActivityPresenter.Listener {
         fabAdd.setOnClickListener {
             presenter.goToAddActivity()
         }
+
+//        val objectJson = JSONObject()
+//        val jsonArrayListClub = JSONArray()
+//        jsonArrayListClub.put(
+//            JSONObject()
+//                .put("namaClub","persib")
+//                .put("stadion","Si jalak harupat")
+//                .put("peringkatLiga",1)
+//        )
+//
+//        jsonArrayListClub.put(
+//            JSONObject()
+//                .put("namaClub","persija")
+//                .put("stadion","BMW Stadion")
+//                .put("peringkatLiga",2)
+//        )
+//
+//        objectJson.put("timNasional","Indonesia")
+//        objectJson.put("federasi","PSSI")
+//        objectJson.put("peringkatFifa",169)
+//        objectJson.put("isActive",true)
+//        objectJson.put("stadion","Gelora bung karno")
+//        objectJson.put("juaraAff",JSONObject.NULL)
+//        objectJson.put("juaraSeaGames",2)
+//        objectJson.put("listClub",jsonArrayListClub)
+//
+//        Log.d("jsonBinar",objectJson.toString())
+//
+//        objectJson.getJSONArray("listClub").getJSONObject(1).getString("namaClub")
+
+
     }
 
     override fun onResume() {
@@ -59,7 +93,6 @@ class MainActivity : AppCompatActivity(), MainActivityPresenter.Listener {
 
     override fun showDeletedFailed(item: Stuff) {
         Toast.makeText(this,"Data ${item.name} gagal dihapus",Toast.LENGTH_LONG).show()
-
     }
 
 

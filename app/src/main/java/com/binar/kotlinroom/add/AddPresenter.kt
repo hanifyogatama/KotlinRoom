@@ -17,9 +17,7 @@ class AddPresenter(val mDb: ItemDatabase, private val listener: Listener) {
             } else {
                 listener.showSavedFailed(item)
             }
-
         }
-
     }
 
     interface Listener {

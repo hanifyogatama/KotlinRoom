@@ -22,7 +22,9 @@ class AddActivity : AppCompatActivity(), AddPresenter.Listener {
         }
 
         btnSave.setOnClickListener {
-            val objectStuff = Stuff(null, etAddNameStuff.text.toString(), etAddQty.text.toString().toInt())
+            val objectStuff = Stuff(null,
+                etAddNameStuff.text.toString(),
+                etAddQty.text.toString().toInt())
             presenter.saveItem(objectStuff)
         }
     }

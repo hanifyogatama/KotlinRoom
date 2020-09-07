@@ -1,7 +1,5 @@
 package com.binar.kotlinroom.edit
 
-import android.widget.Toast
-import com.binar.kotlinroom.add.AddPresenter
 import com.binar.kotlinroom.db.ItemDatabase
 import com.binar.kotlinroom.db.Stuff
 import kotlinx.coroutines.GlobalScope
